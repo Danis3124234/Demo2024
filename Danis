@@ -1,1 +1,5 @@
-
+# Таблица
+| Имя устройства | Интерфейс | IPv4/IPv6 | Маска/Префикс | Шлюз |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
