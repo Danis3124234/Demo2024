@@ -53,3 +53,16 @@ iface ens256 inet static
 address 192.168.0.163
 netmask 255.255.255.252
 ```
+### BR-R
+```
+auto ens192
+iface ens192 inet static
+address 192.168.0.161
+netmask 255.255.255.252
+gateway 192.168.0.162
+
+auto ens224
+iface ens224 inet static
+address 192.168.0.1
+netmask 255.255.255.128
+```
