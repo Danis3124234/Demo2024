@@ -66,3 +66,32 @@ iface ens224 inet static
 address 192.168.0.1
 netmask 255.255.255.128
 ```
+### HQ-R
+```
+auto ens192
+iface ens192 inet static
+address 192.168.0.164
+netmask 255.255.255.252
+gateway 192.168.0.163
+
+auto ens224
+iface ens224 inet static
+address 192.168.0.129
+netmask 255.255.255.224
+```
+### HQ-SRV
+```
+auto ens192
+iface ens192 inet static
+address 192.168.0.2
+netmask 255.255.255.128
+gateway 192.168.0.1
+```
+### BR-SRV
+```
+auto ens192
+iface ens192 inet static
+address 192.168.0.156
+netmask 255.255.255.224
+gateway 192.168.0.129
+```
