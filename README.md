@@ -39,45 +39,45 @@ nano /etc/network/interfaces
 ```
 auto ens192
 iface ens192 inet static
-address 10.12.12.10
+address 10.10.201.100
 netmask 255.255.255.0
-gateway 10.12.12.10
+gateway 10.10.201.254
 
 auto ens224
 iface ens224 inet static
-address 192.168.0.162
+address 192.168.0.165
 netmask 255.255.255.252
 
 auto ens256 
 iface ens256 inet static
-address 192.168.0.163
+address 192.168.0.161
 netmask 255.255.255.252
 ```
 ### BR-R
 ```
 auto ens192
 iface ens192 inet static
-address 192.168.0.161
-netmask 255.255.255.252
-gateway 192.168.0.162
+address 192.168.0.129
+netmask 255.255.255.224
 
 auto ens224
 iface ens224 inet static
-address 192.168.0.1
-netmask 255.255.255.128
+address 192.168.0.162
+netmask 255.255.255.252
+gateway 192.168.0.161
 ```
 ### HQ-R
 ```
 auto ens192
 iface ens192 inet static
-address 192.168.0.164
-netmask 255.255.255.252
-gateway 192.168.0.163
+address 192.168.0.1
+netmask 255.255.255.128
 
 auto ens224
 iface ens224 inet static
-address 192.168.0.129
-netmask 255.255.255.224
+address 192.168.0.166
+netmask 255.255.255.252
+gateway 192.168.0.165
 ```
 ### HQ-SRV
 ```
@@ -91,7 +91,7 @@ gateway 192.168.0.1
 ```
 auto ens192
 iface ens192 inet static
-address 192.168.0.156
+address 192.168.0.130
 netmask 255.255.255.224
 gateway 192.168.0.129
 ```
@@ -105,5 +105,5 @@ Ctrl+X
 ```
 ### Перезагрузил сервис работы с сетью
 ```
-systemctl restart networking.service
+systemctl restart networking
 ```
