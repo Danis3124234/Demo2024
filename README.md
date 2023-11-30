@@ -107,3 +107,52 @@ Ctrl+X
 ```
 systemctl restart networking
 ```
+## 2. Установка и настройка frr
+### Установил пакет frr
+```
+apt-get install frr
+```
+### Проверил состояние
+```
+systemctl statys frr
+```
+### Вошел в файл конфигурации
+```
+nano /etc/frr/daemons
+```
+### Изменил значение 
+```
+ospf=yes
+```
+### Перезагрузил службу 
+```
+systemctl restart frr
+```
+### Вошел в настройку маршрутизации 
+```
+vtysh
+```
+### Просмотрел ip адреса и их состояние
+```
+show ip interface brief
+```
+### Вошел в конфигурацию терминала 
+```
+conf t
+```
+### Запустил процесс 
+```
+router ospf
+```
+### Добавил интерфейсы 
+```
+network (ip адрес) area 0
+```
+### Просмотрел соседей  
+```
+do show ip ospf neighbor
+```
+### Сохранил конфигурацию  
+```
+copy running-config startup-config
+```
