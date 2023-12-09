@@ -158,3 +158,40 @@ do show ip ospf neighbor
 ```
 copy running-config startup-config
 ```
+
+## Установка и настройка DHCP
+### Установил DHCP
+```
+apt update
+``` 
+```
+apt install isc-dhcp-server
+```
+### Вошел в файл настройки
+```
+nano /etc/default/isc-dhcp-server
+```
+### Указал интерфейс который смотрит в сторону сервера
+```
+INTERFACESV4="ens192"
+```
+### Настроил раздачу адресов
+```
+nano /etc/dhcp/dhcpd.conf
+```
+### Пример настройки
+```
+subnet 192.168.0.0 netmask 255.255.255.0 {
+range 192.168.0.10 192.168.0.125;
+option domain-name-servers 8.8.8.8, 8.8.4.4;
+option routers 192.168.0.1;
+}
+```
+### Применил настройку 
+```
+systemctl restart isc-dhcp-server.service
+```
+###
+```
+
+```
