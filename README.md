@@ -159,7 +159,7 @@ do show ip ospf neighbor
 copy running-config startup-config
 ```
 
-## Установка и настройка DHCP
+## 3.Установка и настройка DHCP
 ### Установил DHCP
 ```
 apt update
