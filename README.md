@@ -191,6 +191,23 @@ option routers 192.168.0.1;
 ```
 systemctl restart isc-dhcp-server.service
 ```
+### Включил маршрутизацию
+```
+sysctl -a | grep forward 
+sysctl -w net.ipv4.ip_forward=1 >> /etc/sysctl.conf
+```
+###
+```
+
+```
+###
+```
+
+```
+###
+```
+
+```
 ###
 ```
 
