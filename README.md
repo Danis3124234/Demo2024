@@ -196,7 +196,7 @@ systemctl restart isc-dhcp-server.service
 sysctl -a | grep forward 
 sysctl -w net.ipv4.ip_forward=1 >> /etc/sysctl.conf
 ```
-## NAT с помощью firewalld
+## 3.NAT с помощью firewalld
 ### Установка
 ```
 apt-get -y install firewalld
