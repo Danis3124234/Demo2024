@@ -159,7 +159,7 @@ do show ip ospf neighbor
 copy running-config startup-config
 ```
 
-## 3.Установка и настройка DHCP
+## 3. Установка и настройка DHCP
 ### Установил DHCP
 ```
 apt update
@@ -196,7 +196,7 @@ systemctl restart isc-dhcp-server.service
 sysctl -a | grep forward 
 sysctl -w net.ipv4.ip_forward=1 >> /etc/sysctl.conf
 ```
-## 3.NAT с помощью firewalld
+## 4. NAT с помощью firewalld
 ### Установка
 ```
 apt-get -y install firewalld
