@@ -221,6 +221,50 @@ firewall-cmd --permanent --zone=public --add-masquerade
 ```
 firewall-cmd --reload
 ```
+## 5. Настройка пользователей.
+```
+adduser admin
+usermod -aG root admin
+passwd admin
+P@ssw0rd
+P@ssw0rd
+nano /etc/passwd
+```
+```
+admin:x:0:501::/home/admin:/bin/bash
+```
+## 6. Настройка тунеля
+### Установка графического интерфейса nmtui
+```
+apt install network-manager
+```
+### Заходим в интерфейс
+```
+nmtui
+```
+![]()
+![]()
+![]()
+###
+```
+
+```
+###
+```
+
+```
+###
+```
+
+```
+###
+```
+
+```
+###
+```
+
+```
 ###
 ```
 
