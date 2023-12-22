@@ -244,40 +244,59 @@ nmtui
 ```
 ![](https://github.com/Danis3124234/Demo2024/blob/main/1.png)
 ![](https://github.com/Danis3124234/Demo2024/blob/main/2.png)
-![]()
-###
+![](https://github.com/Danis3124234/Demo2024/blob/main/3.png)
+### Для BQ-R
 ```
-
+nmcli connection modify BR-R ip-tunnel.ttl 64
 ```
-###
 ```
-
+ip r add 192.168.0.0/25 dev gre1
 ```
-###
+### Для HQ-R
 ```
-
+nmcli connection modify HQ-R ip-tunnel.ttl 64
 ```
-###
 ```
-
+ip r add 192.168.0.128/27 dev gre1
 ```
-###
+## 7. Измерение пропускной способности сети между двумя узлами
+### Установка утилиты
 ```
-
+apt-get -y install iperf3
 ```
-###
+### ISP в роли сервера
+### Если не сработает необходимо открыть порт 
+### Команда для открытия:
 ```
-
+iptables -A INPUT -p tcp --dport 5201 -j ACCEPT) 
 ```
-###
 ```
-
+iperf3 -s
 ```
-###
+### HQ-R 
 ```
-
+iperf3 -c 192.168.0.161 -f M
 ```
-###
+### Пример вывода информации
 ```
-
+[ID] Interval      Transfer   Bitrate        Retr Cwnd
+[ 5] 0.00-1.00 sec 345 MBytes 344 MBytes/sec    0 538 KBytes
+[ 5] 1.00-2.00 sec 338 MBytes 338 MBytes/sec    0 676 KBytes
+[ 5] 3.00-4.00 sec 341 MBytes 341 MBytes/sec    0 749 KBytes
+```
+## Составление backup скриптов для сохранения конфигурации сетевых устройств (HQ-R BR-R).
+```
+EDITOR=nano crontab -e (вход в планировщик заданий) 
+```
+```
+минута | час | день | месяц | день недели | "команда, например reboot":
+```
+```
+9 15 * * * cp /etc/frr/frr.conf /etc/networkbackup
+```
+```
+ls /etc/networkbackup
+```
+```
+frr.conf
 ```
