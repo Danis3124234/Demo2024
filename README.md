@@ -242,7 +242,7 @@ apt install network-manager
 ```
 nmtui
 ```
-![]()
+![](https://github.com/Danis3124234/Demo2024/blob/main/1.png)
 ![]()
 ![]()
 ###
