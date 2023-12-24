@@ -304,4 +304,4 @@ frr.conf
 ```
 hostnamectl set-hostname <NAME>; exec bash
 ```
-### <NAME> - имя устройства, <exec bash> — перезапуск оболочки bash для отображения нового хостнейма
+### NAME - имя устройства, exec bash — перезапуск оболочки bash для отображения нового хостнейма
