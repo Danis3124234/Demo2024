@@ -300,3 +300,7 @@ ls /etc/networkbackup
 ```
 frr.conf
 ```
+## Присвоил имена в соответствии с топологией
+```
+hostnamectl set-hostname <NAME>; exec bash
+```
